@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Motifit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #0F0F0F;
+      --surface: #1A1A1A;
+      --border:  #2A2A2A;
+      --body:    #F0EDE8;
+      --muted:   #888;
+      --accent:  #C6F135;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--body);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.05em;
+      color: var(--body);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    nav a.back-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+    }
+
+    nav a.back-link:hover { color: var(--body); }
+
+    /* ── PAGE LAYOUT ── */
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 48px 120px;
+    }
+
+    /* ── HEADER ── */
+    .page-header {
+      margin-bottom: 64px;
+    }
+
+    .page-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 0.92;
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
+    }
+
+    .page-header .effective-date {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ── SUMMARY CARD ── */
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-bottom: 64px;
+    }
+
+    .summary-card p {
+      font-size: 1rem;
+      color: var(--body);
+      line-height: 1.7;
+    }
+
+    /* ── SECTIONS ── */
+    .policy-section {
+      margin-bottom: 52px;
+    }
+
+    .policy-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      color: var(--body);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-section p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section ul {
+      list-style: none;
+      margin: 14px 0;
+    }
+
+    .policy-section ul li {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      padding: 8px 0 8px 20px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .policy-section ul li:first-child { border-top: 1px solid var(--border); }
+
+    .policy-section ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    /* ── CONTACT ── */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      margin-top: 64px;
+    }
+
+    .contact-block h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .contact-block p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .contact-block a {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--bg);
+      background: var(--accent);
+      padding: 11px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .contact-block a:hover { opacity: 0.85; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    footer .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    footer .footer-logo span { color: var(--accent); }
+
+    footer p, footer a {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--body); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      nav { padding: 20px 24px; }
+      .page { padding: 56px 24px 96px; }
+      footer { padding: 28px 24px; }
+      .summary-card { padding: 24px 22px; }
+      .contact-block { padding: 28px 24px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">MOTI<span>FIT</span></a>
+    <a class="back-link" href="index.html">← Back</a>
+  </nav>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="page-header">
+      <p class="page-eyebrow">Legal</p>
+      <h1>PRIVACY<br>POLICY</h1>
+      <p class="effective-date">Effective date: June 11, 2026</p>
+    </header>
+
+    <!-- PLAIN-ENGLISH SUMMARY -->
+    <div class="summary-card">
+      <p><strong>The short version:</strong> Motifit reads health data from Apple Health on your device to show you graphs and stats. That data never leaves your phone. We have no servers, collect no analytics, and use no third-party SDKs. There is nothing to share, sell, or lose.</p>
+    </div>
+
+    <!-- SECTIONS -->
+    <section class="policy-section">
+      <h2>Who We Are</h2>
+      <p>Motifit is an iOS application developed and maintained by Gary Farrell. Questions about this policy can be directed to <a href="mailto:dev.farrell@icloud.com" style="color: var(--accent); text-decoration: none;">dev.farrell@icloud.com</a>.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Data We Access</h2>
+      <p>Motifit requests read-only access to the following Apple Health data types, solely to display your personal fitness trends within the app:</p>
+      <ul>
+        <li>Active Energy Burned (active calories)</li>
+        <li>Step Count</li>
+        <li>Exercise Minutes (Apple Watch workout data)</li>
+        <li>Body Mass (weight)</li>
+      </ul>
+      <p>Access to each data type is granted or denied by you through the iOS Health permissions prompt. You can change these permissions at any time in Settings → Health → Data Access & Devices → Motifit.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>How Your Data Is Used</h2>
+      <p>Health data accessed by Motifit is used exclusively to render charts and statistics within the app on your device. It is never stored outside of your device, transmitted over a network, shared with any third party, or used for any purpose other than displaying it back to you.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Data Storage & Transmission</h2>
+      <p>Motifit does not operate any servers or backend infrastructure. The app has no network activity. Your health data is read from Apple Health in real time and displayed in the app — it is never written to disk by Motifit, cached externally, or sent anywhere.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Third Parties</h2>
+      <p>Motifit contains no third-party SDKs, analytics tools, advertising frameworks, or crash reporting services. No data of any kind is shared with any third party.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Children's Privacy</h2>
+      <p>Motifit does not knowingly collect any information from children under the age of 13. The app collects no personal information from any user regardless of age.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Changes to This Policy</h2>
+      <p>If this privacy policy changes materially — for example, if a future version of Motifit introduces network features — the effective date above will be updated and the new policy will be available at this URL before the update ships.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="contact-block">
+      <h2>Questions?</h2>
+      <p>Reach out anytime. Support requests, privacy questions, or feedback — happy to hear it.</p>
+      <a href="mailto:dev.farrell@icloud.com">dev.farrell@icloud.com</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">MOTI<span>FIT</span></span>
+    <a href="index.html">← Back to Motifit</a>
+    <p>© 2026 Motifit</p>
+  </footer>
+
+</body>
+</html>
