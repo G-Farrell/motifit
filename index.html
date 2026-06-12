@@ -155,7 +155,7 @@
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2px;
     }
 
@@ -183,6 +183,52 @@
     }
 
     .feature-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── GOALS SECTION ── */
+    .goals-section {
+      padding: 0 48px 90px;
+    }
+
+    .goals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .goal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 28px;
+    }
+
+    .goal-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--accent);
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    .goal-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 10px;
+      color: var(--body);
+    }
+
+    .goal-card p {
       font-size: 0.9rem;
       color: var(--muted);
       line-height: 1.65;
@@ -234,6 +280,63 @@
 
     .privacy-text a:hover { text-decoration: underline; }
 
+    /* ── SUPPORT SECTION ── */
+    .support-section {
+      margin: 0 48px 90px;
+      padding: 56px 48px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .support-text h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 12px;
+    }
+
+    .support-text p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 420px;
+      line-height: 1.7;
+    }
+
+    .support-action {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .btn-support {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--bg);
+      background: var(--accent);
+      padding: 13px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+      white-space: nowrap;
+    }
+
+    .btn-support:hover { opacity: 0.85; }
+
+    .support-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -277,8 +380,10 @@
       nav { padding: 20px 24px; }
       .hero { padding: 72px 24px 64px; }
       .features { padding: 64px 24px; }
+      .goals-section { padding: 0 24px 64px; }
       .divider { margin: 0 24px; }
       .privacy-section { margin: 0 24px 64px; padding: 36px 28px; }
+      .support-section { margin: 0 24px 64px; padding: 36px 28px; }
       footer { padding: 28px 24px; }
       .feature-card:first-child { border-radius: 12px 12px 0 0; }
       .feature-card:last-child  { border-radius: 0 0 12px 12px; }
@@ -318,19 +423,48 @@
     <p class="features-label">What's inside</p>
     <div class="features-grid">
       <div class="feature-card">
-        <span class="feature-icon">📈</span>
-        <h3>Visual Progress</h3>
-        <p>Beautiful charts for active calories, steps, exercise minutes, and weight — pulled straight from Apple Health.</p>
+        <span class="feature-icon">📅</span>
+        <h3>Rolling 5 Weeks</h3>
+        <p>See your last 5 weeks of active calorie history at a glance, plus a weekly summary of calories, exercise minutes, and steps.</p>
       </div>
       <div class="feature-card">
-        <span class="feature-icon">🎯</span>
-        <h3>Stay On Track</h3>
-        <p>See your trends at a glance and know exactly where you stand against your personal goals.</p>
+        <span class="feature-icon">📈</span>
+        <h3>Advanced Metrics</h3>
+        <p>Weight trends with 7, 30, and 365-day rolling averages — so you see the real signal beneath daily fluctuations.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔔</span>
+        <h3>Smart Notifications</h3>
+        <p>Timely nudges for your goals and activity — helpful reminders without the noise.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">⚡</span>
         <h3>No Fluff</h3>
         <p>No social feeds. No subscriptions. No bloat. Just your data, presented clearly so you can focus on moving.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- GOALS -->
+  <section class="goals-section">
+    <p class="features-label" style="margin-top: 90px;">Custom goals</p>
+    <div class="goals-grid">
+      <div class="goal-card">
+        <span class="goal-tag">Streak</span>
+        <h3>Daily Habits</h3>
+        <p>Build consistency with goals that reset every day. Perfect for habits like a morning walk, meditation, or skipping the elevator.</p>
+      </div>
+      <div class="goal-card">
+        <span class="goal-tag">Tally</span>
+        <h3>Track Choices</h3>
+        <p>Log positive and negative actions to see the balance over time. Great for tracking healthy eating, screen time, or anything with two sides.</p>
+      </div>
+      <div class="goal-card">
+        <span class="goal-tag">Frequency</span>
+        <h3>Weekly Targets</h3>
+        <p>Set a target number of times per week — like working out 4 times or cooking at home 5 nights. Progress resets each week.</p>
       </div>
     </div>
   </section>
@@ -345,12 +479,27 @@
     </div>
   </div>
 
+  <!-- SUPPORT -->
+  <div class="support-section" id="support">
+    <div class="support-text">
+      <h2>Get Help</h2>
+      <p>Have a question, found a bug, or want to suggest a feature? Send an email and we'll get back to you.</p>
+    </div>
+    <div class="support-action">
+      <a class="btn-support" href="mailto:dev.farrell@icloud.com">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        dev.farrell@icloud.com
+      </a>
+      <span class="support-note">Typically responds within 24 hours</span>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <span class="footer-logo">MOTI<span>FIT</span></span>
     <div class="footer-links">
       <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:dev.farrell@icloud.com">Support</a>
+      <a href="#support">Support</a>
     </div>
     <p>© 2026 Gary Farrell</p>
   </footer>
